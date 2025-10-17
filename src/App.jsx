@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import {  HashRouter, Routes, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Navbar from "./layout/Navbar";
 import TaskList from "./pages/TaskList";
@@ -9,7 +9,7 @@ import PrivateRoute from "./layout/PrivateRoute";
 const App = () => {
   return (
     <>
-      <BrowserRouter>
+      <HashRouter>
         <Navbar />
         <Routes>
           <Route path="/signup" element={<Signup />}></Route>
@@ -21,7 +21,7 @@ const App = () => {
             <Route path="/updateTask/:id" element={<TaskForm />}></Route>
           </Route>
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </>
   );
 };
